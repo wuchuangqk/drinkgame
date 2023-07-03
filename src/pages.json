@@ -12,6 +12,13 @@
 				"navigationBarTitleText": "转瓶子",
 				"enablePullDownRefresh": false
 			}
+		},
+		{
+			"path": "pages/danmu/danmu",
+			"style": {
+				"navigationBarTitleText": "手持弹幕",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"globalStyle": {
