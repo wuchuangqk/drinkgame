@@ -1,15 +1,18 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"easycom": {
+		"^app-(.*)": "@/components/app-$1.vue"
+	},
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/spin-bottle/spin-bottle",
 			"style": {
-				"navigationBarTitleText": "转瓶子",
+				"navigationStyle": "custom",
 				"enablePullDownRefresh": false
 			}
 		},
@@ -18,6 +21,12 @@
 			"style": {
 				"navigationBarTitleText": "手持弹幕",
 				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/dice/dice",
+			"style": {
+				"navigationStyle": "custom"
 			}
 		}
 	],

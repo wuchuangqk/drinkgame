@@ -1,7 +1,41 @@
+page {
+  font-size: 28rpx;
+  font-family: 'PingFang SC-Medium', 'PingFang SC', 'Microsoft Yahei';
+}
+
 .page-full {
   height: 100vh;
 }
 
 .h-full {
   height: 100%;
+}
+
+.flex {
+  display: flex;
+
+  &.items-center {
+    align-items: center;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+}
+
+.flex-1 {
+  flex: 1;
 }

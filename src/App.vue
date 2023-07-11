@@ -13,4 +13,8 @@ onHide(() => {
 <style>
 /*每个页面公共css */
 @import './styles/common.scss';
+
+* {
+  box-sizing: border-box;
+}
 </style>

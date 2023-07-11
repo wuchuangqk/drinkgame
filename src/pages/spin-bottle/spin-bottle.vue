@@ -1,17 +1,17 @@
 <template>
 	<view class="page-full page">
+		<AppNavbar />
 		<view class="wrap">
-			<image src="/static/bottle.png" class="bottle" :style="boxStyle" />
+			<image src="/static/jiuping@2x.png" class="bottle" :style="boxStyle" />
 		</view>
-		<view class="bottom">
-			<button type="primary" data-eventsync="true" @click="start">开始</button>
-		</view>
+		<image src="/static/zhuan@2x.png" class="start" data-eventsync="true" @click="start" />
 	</view>
 </template>
 
 <script setup lang="ts">
 import { ref, onBeforeMount } from 'vue'
 import _ from 'lodash'
+import AppNavbar from '@/components/app-navbar.vue';
 
 onBeforeMount(() => {
 })
@@ -33,6 +33,8 @@ const start = () => {
 <style scoped lang="scss">
 .page {
 	position: relative;
+	background: url("/static/bg_zpz@2x.png") no-repeat;
+	background-size: 100% 100%;
 }
 
 .wrap {
@@ -43,15 +45,17 @@ const start = () => {
 }
 
 .bottle {
-	width: 74px;
-	height: 351px;
-	transform: rotate(90deg);
+	width: 242rpx;
+	height: 784rpx;
+	// transform: rotate(90deg);
 }
 
-.bottom {
+.start {
 	position: absolute;
-	bottom: 20%;
-	display: flex;
-	justify-content: center;
+	bottom: 137rpx;
+	width: 206rpx;
+	height: 206rpx;
+	left: 50%;
+	transform: translateX(-50%);
 }
 </style>
