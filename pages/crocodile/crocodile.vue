@@ -1,33 +1,23 @@
 <template>
   <view class="page-full page">
     <app-navbar />
-    <view>
-      <view class="grid">
-        <view v-for="(bomb, index) in bombList" :key="bomb.num" class="grid-item">
-          <view v-show="bomb.show" class="bomb flex center" @click="guess(bomb, index)">{{ bomb.num }}</view>
-        </view>
-      </view>
-    </view>
+
     <app-dialog v-if="showRule" title="规则" @close="showRule = false">
       <view style="margin-top: 70rpx;">
         <view>
-          数字炸弹游戏规则:在一个数字范围内，有一个数字作为炸弹，谁猜中这个炸弹就被惩罚。
+          鳄鱼拔牙游戏规则:游戏里有一只张着大嘴的鳄鱼！你可以和你的朋友一起。按下鳄鱼的牙齿。看看按到哪颗牙齿是危险的！
         </view>
         <view style="margin-top: 10px;">
-          比如范围是1~99，炸弹是60，然后猜了一个数字是30，30不是炸弹，那么现在猜数字的范围就缩小到30~100，又猜了一个数字80.80也不是炸弹，那么现在又缩小范围到30~80，每次猜不能猜边界上的值，直到有人猜中这个炸弹，然后就受到惩罚。
+          玩家依次点击鳄鱼嘴里的牙齿，其中有一颗牙齿按下后鳄鱼的嘴会咬下去。谁触发了鳄鱼咬下的机关谁就是需要被惩罚的玩家！!
         </view>
       </view>
     </app-dialog>
     <!-- 游戏结束 -->
     <view v-if="showEnd" class="end flex column items-center">
-      <image src="/static/youxjs.png" style="width:544rpx;height:122rpx;margin-top: 20%;" />
-      <view class="v1 flex center">
-        <view class="bomb">{{ answer }}</view>
-      </view>
-      <view style="position: relative;top: -120rpx;">
+      <image src="/static/fahuo.png" class="end-img" />
+      <view class="flex justify-center" style="margin-top: 95rpx;">
         <view class="btn primary" @click="restart">再来一局</view>
         <view class="btn second">选择惩罚</view>
-        <view class="btn primary">分享好友</view>
       </view>
     </view>
   </view>
@@ -137,21 +127,27 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 550rpx;
-  height: 90rpx;
+  width: 300rpx;
+  height: 70rpx;
   background: #F68B39;
   border: 3px solid #000000;
   border-radius: 45rpx;
   font-size: 30rpx;
   color: #fff;
-  margin-bottom: 46rpx;
 
   &.primary {
     background: #F68B39;
+    margin-right: 44rpx;
   }
 
   &.second {
     background: #FF4D6A;
   }
+}
+
+.end-img {
+  width: 749rpx;
+  height: 1000rpx;
+  margin: 0 auto;
 }
 </style>

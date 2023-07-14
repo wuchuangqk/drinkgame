@@ -2,9 +2,9 @@
 	<view class="page-full page">
 		<AppNavbar />
 		<view class="wrap">
-			<image src="http://admin.jlwp.vip/jjsq/jiuping@2x.png" class="bottle" :style="boxStyle" />
+			<image src="http://admin.jlwp.vip/jjsq/jiuping@2x.png" class="bottle" :style="{ transform: `rotate(${deg}deg)` }" />
 		</view>
-		<image src="http://admin.jlwp.vip/jjsq/zhuan@2x.png" class="start" data-eventsync="true" @click="start" />
+		<image src="http://admin.jlwp.vip/jjsq/zhuan@2x.png" class="start" @click="start" />
 	</view>
 </template>
 
@@ -16,18 +16,22 @@ export default {
 	data() {
 		return {
 			boxStyle: {},
+			deg: 0,
+			flag: false,
 		}
 	},
 	methods: {
 		start() {
-			// 转3圈加一圈随机
+			// 避免重复点击
+			if (this.flag) return
+			this.flag = true
+			// 固定转3圈，加一圈随机角度
 			const fixedDeg = 360 * 3
 			const randomDeg = _.random(0, 360)
-			deg += fixedDeg + randomDeg
-			this.boxStyle = {
-				transition: 'all 3s ease',
-				transform: `rotate(${deg}deg)`
-			}
+			this.deg += fixedDeg + randomDeg
+			setTimeout(() => {
+				this.flag = false
+			}, 3000);
 		}
 	}
 }
@@ -50,7 +54,7 @@ export default {
 .bottle {
 	width: 242rpx;
 	height: 784rpx;
-	// transform: rotate(90deg);
+	transition: all 3s ease;
 }
 
 .start {

@@ -55,7 +55,7 @@ export default {
       ],
       total: 0,
       isOpen: false,
-      isCanOpen: false,
+      isCanOpen: true,
       startY: 0,
     }
   },
@@ -68,7 +68,6 @@ export default {
       this.total = 0
       // 空位
       const emptyIndex = _.random(0, 5)
-      console.log(this);
       this.diceList.forEach((dice, index) => {
         if (index === emptyIndex) {
           dice.number = -1
@@ -115,7 +114,7 @@ export default {
   height: 202rpx;
   left: 50%;
   transform: translateX(-50%);
-  background: url("http://admin.jlwp.vip/jjsq/zhongdi@2x.jpg") no-repeat;
+  background: url("http://admin.jlwp.vip/jjsq/zhongdi.png") no-repeat;
   background-size: contain;
   position: absolute;
   bottom: 24%;
@@ -146,8 +145,6 @@ export default {
   height: 60rpx;
   background: rgba(0, 0, 0, 0.27);
   border-radius: 30rpx;
-  text-stroke: 3px #000000;
-  -webkit-text-stroke: 3px #000000;
   font-weight: bold;
   color: #FFFFFF;
   position: absolute;
