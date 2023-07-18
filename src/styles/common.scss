@@ -13,27 +13,27 @@ page {
 
 .flex {
   display: flex;
+}
 
-  &.items-center {
-    align-items: center;
-  }
+.flex.items-center {
+  align-items: center;
+}
 
-  &.justify-between {
-    justify-content: space-between;
-  }
+.flex.justify-between {
+  justify-content: space-between;
+}
 
-  &.justify-center {
-    justify-content: center;
-  }
+.flex.justify-center {
+  justify-content: center;
+}
 
-  &.center {
-    align-items: center;
-    justify-content: center;
-  }
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
 
-  &.column {
-    flex-direction: column;
-  }
+.flex.column {
+  flex-direction: column;
 }
 
 .flex-1 {

@@ -4,25 +4,25 @@
     <view class="v1">
       <view v-for="dice in diceList" :key="dice.x" class="rect"
         :style="{ left: dice.x, top: dice.y, zIndex: dice.zIndex }">
-        <image v-if="dice.number !== -1" :src="`/static/${dice.number}@2x.png`" class="dice" />
+        <image v-if="dice.number !== -1" :src="`http://admin.jlwp.vip/jjsq/${dice.number}@2x.png`" class="dice" />
       </view>
     </view>
-    <image src="/static/zhong_ding@2x.png" class="zhong" :style="{ bottom: isOpen ? '45%' : '28%' }" />
+    <image src="http://admin.jlwp.vip/jjsq/zhong_ding@2x.png" class="zhong" :style="{ bottom: isOpen ? '45%' : '28%' }" />
     <view v-show="isOpen" class="dian flex center">总点数：{{ total }}</view>
     <view class="v2 flex items-center justify-between">
       <view>
-        <image src="/static/icon_jjds@2x.png" style="width: 123rpx;height: 118rpx;" />
+        <image src="http://admin.jlwp.vip/jjsq/icon_jjds@2x.png" style="width: 123rpx;height: 118rpx;" />
       </view>
       <view @click="reStart">
-        <image src="/static/dianj_y@2x.png" style="width: 195rpx;height: 195rpx;" />
+        <image src="http://admin.jlwp.vip/jjsq/dianj_y@2x.png" style="width: 195rpx;height: 195rpx;" />
       </view>
       <view>
-        <image src="/static/icon_suoding@2x.png" style="width: 96rpx;height: 118rpx;" />
+        <image src="http://admin.jlwp.vip/jjsq/icon_suoding@2x.png" style="width: 96rpx;height: 118rpx;" />
       </view>
     </view>
     <view v-show="isCanOpen" class="v3">
-      <image src="/static/haud@2x.png" style="width: 51rpx;height: 159rpx;" />
-      <image src="/static/shou@2x.png" style="width: 153rpx;height: 134rpx;" />
+      <image src="http://admin.jlwp.vip/jjsq/haud@2x.png" style="width: 51rpx;height: 159rpx;" />
+      <image src="http://admin.jlwp.vip/jjsq/shou@2x.png" style="width: 153rpx;height: 134rpx;" />
       <text class="t2">请往上滑动盅</text>
     </view>
   </view>
@@ -98,7 +98,7 @@ const touchend = (e) => {
 <style scoped lang="scss">
 .page {
   position: relative;
-  background: url("/static/bg_fkytz@2x.png") no-repeat;
+  background: url("http://admin.jlwp.vip/jjsq/bg_fkytz@2x.jpg") no-repeat;
   background-size: 100% 100%;
 }
 
@@ -107,7 +107,7 @@ const touchend = (e) => {
   height: 202rpx;
   left: 50%;
   transform: translateX(-50%);
-  background: url("/static/zhongdi@2x.png") no-repeat;
+  background: url("http://admin.jlwp.vip/jjsq/zhongdi@2x.jpg") no-repeat;
   background-size: contain;
   position: absolute;
   bottom: 24%;

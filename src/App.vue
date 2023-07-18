@@ -14,7 +14,11 @@ onHide(() => {
 /*每个页面公共css */
 @import './styles/common.scss';
 
-* {
+page {
+  box-sizing: border-box;
+}
+
+:not(not) {
   box-sizing: border-box;
 }
 </style>

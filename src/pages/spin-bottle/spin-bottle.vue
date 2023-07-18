@@ -2,9 +2,9 @@
 	<view class="page-full page">
 		<AppNavbar />
 		<view class="wrap">
-			<image src="/static/jiuping@2x.png" class="bottle" :style="boxStyle" />
+			<image src="http://admin.jlwp.vip/jjsq/jiuping@2x.png" class="bottle" :style="boxStyle" />
 		</view>
-		<image src="/static/zhuan@2x.png" class="start" data-eventsync="true" @click="start" />
+		<image src="http://admin.jlwp.vip/jjsq/zhuan@2x.png" class="start" data-eventsync="true" @click="start" />
 	</view>
 </template>
 
@@ -33,7 +33,7 @@ const start = () => {
 <style scoped lang="scss">
 .page {
 	position: relative;
-	background: url("/static/bg_zpz@2x.png") no-repeat;
+	background: url("http://admin.jlwp.vip/jjsq/bg_zpz@2x.jpg") no-repeat;
 	background-size: 100% 100%;
 }
 
