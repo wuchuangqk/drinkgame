@@ -13,6 +13,7 @@ import _ from 'lodash'
 import AppNavbar from '@/components/app-navbar.vue';
 let deg = 0
 export default {
+	components: { AppNavbar },
 	data() {
 		return {
 			boxStyle: {},

@@ -2,7 +2,7 @@
   <view>
     <view :style="{ height: statusBarHeight }"></view>
     <view class="title-text" @click="back">
-      <text class="arrow">左</text>
+      <image src="/static/back.png" class="back-icon"></image>
       <text>返回</text>
     </view>
   </view>
@@ -35,6 +35,12 @@ export default {
 }
 
 .arrow {
+  margin: 0 28rpx 0 32rpx;
+}
+
+.back-icon {
+  width: 36rpx;
+  height: 36rpx;
   margin: 0 28rpx 0 32rpx;
 }
 </style>

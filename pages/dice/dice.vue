@@ -43,6 +43,7 @@ class Dice {
   }
 }
 export default {
+  components: { AppNavbar },
   data() {
     return {
       diceList: [

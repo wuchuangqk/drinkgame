@@ -31,7 +31,9 @@ class Bomb {
   }
 }
 import _ from 'lodash'
+import AppNavbar from '@/components/app-navbar.vue';
 export default {
+  components: { AppNavbar },
   data() {
     return {
       bombList: [],
