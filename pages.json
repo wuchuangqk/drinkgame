@@ -19,7 +19,8 @@
 		{
 			"path": "pages/dice/dice",
 			"style": {
-				"navigationStyle": "custom"
+				"navigationStyle": "custom",
+				"disableScroll": true
 			}
 		},
 		{
